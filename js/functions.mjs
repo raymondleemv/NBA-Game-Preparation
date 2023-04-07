@@ -1,4 +1,4 @@
-const api = require('./api');
+import * as api from './api.mjs';
 
 /**
  * Calls API to get all the NBA teams
@@ -116,7 +116,7 @@ function binarySearch(data, searchValue) {
 	}
 }
 
-module.exports = {
+export {
 	getStarPlayerForTeamInGame,
 	getPreviousGameForTeam,
 	getUpcomingGamesOnDate,

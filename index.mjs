@@ -4,8 +4,8 @@ const path = require('path');
 const dotenv = require('dotenv');
 
 dotenv.config();
-const api = require('./js/api');
-const func = require('./js/functions');
+const api = require('./js/api.mjs');
+const func = require('./js/functions.mjs');
 
 //set up Express app
 const app = express();

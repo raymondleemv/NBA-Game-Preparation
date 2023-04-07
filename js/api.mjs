@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 /**
  * Call the YouTube search API to get a list of search results based on keyword
  * @param {string} keyword Search YouTube with this keyword
