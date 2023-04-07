@@ -1,11 +1,12 @@
 //import required modules
-const express = require('express');
-const path = require('path');
-const dotenv = require('dotenv');
+import express from 'express';
+import dotenv from 'dotenv';
+import path from 'path';
+import fetch from 'node-fetch';
 
 dotenv.config();
-const api = require('./js/api.mjs');
-const func = require('./js/functions.mjs');
+import * as api from './js/api.mjs';
+import * as func from './js/functions.mjs';
 
 //set up Express app
 const app = express();

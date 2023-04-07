@@ -88,7 +88,7 @@ async function getGameBoxScore(gameID) {
 	return data;
 }
 
-module.exports = {
+export {
 	searchYouTube,
 	getNBAGamesOnDate,
 	getTeamSchedule,
