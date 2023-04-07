@@ -1,8 +1,6 @@
 //import required modules
 import express from 'express';
 import dotenv from 'dotenv';
-import path from 'path';
-import fetch from 'node-fetch';
 
 dotenv.config();
 import * as api from './js/api.mjs';
@@ -13,10 +11,10 @@ const app = express();
 const port = process.env.PORT || 8888;
 
 //define important folders
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', './views');
 app.set('view engine', 'pug');
 //setup public folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('./public'));
 
 let teamNames;
 
