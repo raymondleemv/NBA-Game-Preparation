@@ -1,0 +1,25 @@
+extends layout 
+
+block main-content 
+  h1.page-title A little about this App
+  p The NBA game preparation app lists all the upcoming NBA games today, both ones in progress and ones that have not yet started. By clicking the team logos, information about the star player of that team a list of YouTube videos about this player's highlights will be shown, so that you can prepare yourself for this team's upcoming game, knowing that the player will be one of the key points of the match. 
+  h1.page-title Upcoming Matches on #{date}
+  each game in games 
+    .game 
+      h3.game__status #{game.gameStatus}
+      .game__info 
+        .game__away-team.team
+          - url = `/team?name=${game.away}&currentGameDate=${date}`;
+          - logoURL = `/images/${game.away}.svg`;
+          a.game__team-info(href=url)
+            p #{game.away}
+            img(src=logoURL)
+          p.game__team-score #{game.awayPts}
+        p VS
+        .game__home-team.team
+          - url = `/team?name=${game.home}&currentGameDate=${date}`;
+          - logoURL = `/images/${game.home}.svg`;
+          p.game__team-score #{game.homePts}
+          a.game__team-info(href=url)
+            p #{game.home}
+            img(src=logoURL)

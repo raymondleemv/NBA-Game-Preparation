@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+	background-color: #243b53;
+	color: white;
+	padding: 8px;
+}
+
+.page-title {
+	margin: 16px 0;
+}
+
+p {
+	margin: 8px 0;
+}
+.game {
+	background-color: white;
+	color: #243b53;
+	min-width: 500px;
+	max-width: 60%;
+	margin: auto;
+	padding: 12px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.game__status {
+	text-align: center;
+}
+
+.game__info {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.game__info > p,
+.game__team-score {
+	font-size: 24px;
+}
+
+.game__team-score {
+	padding: 24px;
+}
+
+.team {
+	display: flex;
+	align-items: center;
+}
+
+.game__team-info p {
+	text-align: center;
+}
+
+.game__team-info img {
+	width: 150px;
+	height: 150px;
+}
+
+.highlight {
+	width: fit-content;
+	background-color: white;
+	color: #243b53;
+	max-width: 480px;
+}
+
+.highlights-container {
+	display: flex;
+	gap: 3rem;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.highlight__info {
+	padding: 8px;
+}
+
+.highlight__info h4 {
+	margin-bottom: 8px;
+}
+
+footer p {
+	text-align: center;
+}
+
+a:visited {
+	color: white;
+}
+
+.highlight__info a:visited,
+.team a:visited {
+	color: blue;
+}

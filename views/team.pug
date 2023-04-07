@@ -1,0 +1,15 @@
+extends layout 
+
+block main-content 
+  h1.page-title #{teamName}
+  h3 The Star Player of #{teamName} is #{starPlayer.name}, who scored the most points - #{starPlayer.pts}pts in the last game against the #{lastGame.opponent} on #{lastGame.date}.
+  p Here are some of his highlights
+  .highlights-container
+    each highlight in highlights
+      - url = `https://www.youtube.com/watch?v=${highlight.id.videoId}`;
+      - thumbnail = `${highlight.snippet.thumbnails.high.url}`
+      .highlight 
+        img(src=thumbnail)
+        .highlight__info
+          h4.api-data #{highlight.snippet.title}
+          a(href=url target="_blank") watch
