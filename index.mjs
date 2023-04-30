@@ -10,7 +10,6 @@ import * as func from './js/functions.mjs';
 const app = express();
 const port = process.env.PORT || 8888;
 
-//define important folders
 app.set('views', './views');
 app.set('view engine', 'pug');
 //setup public folder
